@@ -17,128 +17,15 @@ package com.mycompany.division;
  *CSD402, Module10.2 Assignment
  * Girma Dingeto
  */
-//File: Division.java
+    //Save file as: Division.java
 public abstract class Division {
 	protected String divisionName;
-	protected int accountNumber;
+	protected String accountNumber;
 	
-	public Division(String divisionName, int accountNumber) {
-		this.divisionName = divisionName;
-		this.accountNumber = accountNumber;
+	public Division(String name, String account) {
+		this.divisionName = name;
+		this.accountNumber = account;
 	}
-	
 	public abstract void display();
 }
-
-
-//Save file as: InternationalDivision.java
-public class InternationalDivision extends Division {
-	private String country;
-	private String language;
-	
-	public InternationalDivision(String name, String account, String Country, String language){
-		super(name, account);
-		this.country = country;
-		this.language = language;
-	}
-	@Override
-	public void display() {
-		System.out.println("International Division: " + divisionName);
-		System.out.println("Account Number: " + accountNumber);
-		System.out.println("Country: " + country);
-		System.out.println("Language: " + language);
-		System.out.println("---------------------------------------");
-        }
-}	
-// Save file as DomesticDivision.java
-public class DomesticDivision extends Division {
-	private String state;
-	
-	public DomesticDivision(String name,String account, String state) {
-	super(name, account);
-	this.state = state;
-	}
-}
-	
-	@Override
-	public void display() {
-		System.out.println("Domestic Division: " + divisionName);
-		System.out.println("Account Number: " + accountNumber);
-		System.out.println("State: " + state);
-		System.out.println("---------------------------------------");
-	}
-
-// Save file as: UseDivision.java
-public class UseDivision {
-	public static void main(String[] args) {
-		InternationalDivision intDiv1 = new InternationalDivision("European Sales","INT-9901","Germany","German");
-		InternationalDivision intDiv2 = new InternationalDivision("Asian Operations","INT-4422","Japan","Japanese");
-		
-		DomesticDivision domDiv1 = newDomesticDivision("Western Region","DOM-1102","California");
-		DomesticDivision domDiv2 = newDomesticDivision("East Coast Logistics","DOM-5588","New York");	
-		
-		intDiv1.display();
-		intDiv2.display();
-		domDiv1.display();
-		domDiv2.display();
-        }
-    }
-
-	//Save file as: InternationalDivision.java
-public class InternationalDivision extends Division {
-	private String country;
-	private String language;
-	
-	public InternationalDivision(String name, String account, String Country, String language){
-		super(name, account);
-		this.country = country;
-		this.language = language;
-	}
-	@Override
-	public void display() {
-		System.out.println("International Division: " + divisionName);
-		System.out.println("Account Number: " + accountNumber);
-		System.out.println("Country: " + country);
-		System.out.println("Language: " + language);
-		System.out.println("---------------------------------------");
-        }
-}	
-// Save file as DomesticDivision.java
-public class DomesticDivision extends Division {
-	private String state;
-	
-	public DomesticDivision(String name,String account, String state) {
-	super(name, account);
-	this.state = state;
-	}
-}
-	
-	@Override
-	public void display() {
-		System.out.println("Domestic Division: " + divisionName);
-		System.out.println("Account Number: " + accountNumber);
-		System.out.println("State: " + state);
-		System.out.println("---------------------------------------");
-	}
-
-// Save file as: UseDivision.java
-public class UseDivision {
-	public static void main(String[] args) {
-		InternationalDivision intDiv1 = new InternationalDivision("European Sales","INT-9901","Germany","German");
-		InternationalDivision intDiv2 = new InternationalDivision("Asian Operations","INT-4422","Japan","Japanese");
-		
-		DomesticDivision domDiv1 = new DomesticDivision("Western Region","DOM-1102","California");
-		DomesticDivision domDiv2 = new DomesticDivision("East Coast Logistics","DOM-5588","New York");	
-		
-		intDiv1.display();
-		intDiv2.display();
-		domDiv1.display();
-		domDiv2.display();
-        }
-    }
-
-	
-
-
-	
 
