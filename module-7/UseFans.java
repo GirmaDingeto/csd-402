@@ -13,9 +13,7 @@
  */
 
 package com.mycompany.usefans;
-
 /**
- *
  * Girma Dingeto
  */
 
@@ -52,14 +50,12 @@ class Fan{
 	}
 	//Getters and Setters using 'this'
 	public int getSpeed() { return this.speed;}
-	public void setSpeed(int speed){this.speed = speed; }
-	
+	public void setSpeed(int speed){this.speed = speed; }	
 	public boolean isOn() { return this.on;}
 	public void setOn(boolean on){this.on = on; }
 	
 	public double getRadius() { return this.radius;}
-	public void setRadius(double radius){this.radius = radius; }
-	
+	public void setRadius(double radius){this.radius = radius; }	
 	public String getColor() { return this.color;}
 	public void setColor(String color){this.color = color; }
 	// toString method to describe fan state
@@ -71,15 +67,14 @@ class Fan{
 			return "Fan is off:color=" + this.color +", radius=" + this.radius;
 		}
 	}
- }
-	
+ }	
 public class UseFans {
     public static void main(String[] args) { 
 	// Create a collection of Fan instances
        
 	Collection<Fan> fanList=new ArrayList<>();
         
-        // Add various fan instances
+         // Add various fan instances
 	fanList.add(new Fan()); // Default fan
         fanList.add(new Fan(Fan.FAST, true, 10, "yellow"));
 	fanList.add(new Fan(Fan.MEDIUM, true, 8, "blue"));
@@ -91,20 +86,16 @@ public class UseFans {
 // Method taking a collection of Fan instances
 public static void displayFans(Collection<Fan> fans) {
 	for (Fan fan : fans ){
-            displayFan(fan);
-        
-            System.out.print("\n");
-		
+            displayFan(fan);       
+            System.out.print("\n");	
 	}
 }
-
-
 // Method taking a single instance of Fan Without Using toString()
 public static void displayFan(Fan fan){
 	System.out.println("Fan Status:" +( fan.isOn()? "ON": "OFF"));
 	System.out.println("Speed: " + fan.getSpeed());
         System.out.println("Radius: " + fan.getRadius());
-	System.out.println("Color: " + fan.getColor());	
-         
+	System.out.println("Color: " + fan.getColor());	    
     }
  }
+
